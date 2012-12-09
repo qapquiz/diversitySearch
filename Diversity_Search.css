@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'S_L-Regular';
+    src: url('fonts/S_L-Regular.otf');
+    src: url('fonts/rsu_regular.otf') format('otf'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrapper{
+  font-family: S_L-Regular, sans-serif;
+  font-weight: normal;
+  
+  margin: 0 auto;
+  padding: 100px;
+  border-radius: 20px;
+  background-color:white;
+  text-align: center;
+  weight: 70%;
+  height: 70%;
+}
+
+header{
+  font-size: 20px  
+}
 
 body {
   background-color: #F8F8F8;
@@ -6,6 +30,7 @@ body {
   font-weight: normal;
   line-height: 1.2em;
   margin: 15px;
+  background-color: orange;
 }
 
 p {

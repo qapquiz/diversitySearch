@@ -7,26 +7,18 @@
     <link rel="stylesheet" href="Diversity_Search.css">
   </head>
   <body>
-    <!--
-    <h1>Diversity_Search</h1>
-    
-    <p>Hello world from Dart!</p>
-    
-    <div id="container">
-      <p id="text"></p>
-    </div>
-    -->
-    <h1>Bing Search Tester (Basic)</h1> 
+    <div id="wrapper">
+    <header><h1>Diversity Search</h1></header> 
     <form method="POST" action="basic_search.php"> 
       <label for="service_op">Service Operation</label><br/> 
       <input name="service_op" type="radio" value="Web" CHECKED /> Web 
-      <input name="service_op" type="radio" value="Image" /> Image <br/> 
-      <label for="query">Query</label><br/> <input name="query" type="text" size="60" maxlength="60" value="" /><br /><br /> 
+      <input name="service_op" type="radio" value="Image" /> Image <br/><br /> 
+      <input name="query" type="text" size="60" maxlength="60" value="" /><br /><br /> 
       <input name="bt_search" type="submit" value="Search" /> 
     </form> 
     <h2>Results</h1> 
     {RESULTS}
-
+    </div>
     <script type="application/dart" src="web/Diversity_Search.dart"></script>
     <script src="https://dart.googlecode.com/svn/branches/bleeding_edge/dart/client/dart.js"></script>
   </body>
