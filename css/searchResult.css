@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'S_L-Regular';
+    src: url('fonts/S_L-Regular.otf');
+    src: url('fonts/rsu_regular.otf') format('otf'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrapper{
+  font-family: S_L-Regular, sans-serif;
+  font-weight: normal;
+  
+  top: 0px;
+}
+
+header {
+    margin: 0;
+    background-color: orange;
+}
