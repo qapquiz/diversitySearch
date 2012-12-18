@@ -33,6 +33,9 @@
 			  break;	
 		}
 	  }
+      //armariya add
+      $contents = file_get_contents('searchResults.html');
+      //end armariya add
 	  $contents = str_replace('{RESULTS}', $resultStr, $contents);
   }
   
