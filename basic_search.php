@@ -1,7 +1,6 @@
 <?php
   $acctKey = 'bAJBaFvnuCrgiaAW9ZtxdG4AAW6RnA7xs/uwLde1zao=';
   $rootUri = 'https://api.datamarket.azure.com/Bing/Search';
-  
   $contents = file_get_contents('Diversity_Search.html');
   
   if($_POST['query']){
