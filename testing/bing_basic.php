@@ -1,9 +1,14 @@
 <?php
     $acctKey = "bAJBaFvnuCrgiaAW9ZtxdG4AAW6RnA7xs/uwLde1zao=";
     $rootUri = 'https://api.datamarket.azure.com/Bing/Search';
+	
+	//initialize
+	$top = 100;
+	$countIndex = 0;
+	$relatedArray = array();
     
     //read the content of html file into string
-    $contents = file_get_contents("bing_search.php");
+    $contents = file_get_contents("bing_search.html");
     
     if($_POST['query'])
     {
@@ -46,8 +51,15 @@
                 case 'ImageResult':
                     $resultStr .=  "<h4>{$value->Title} ({$value->Width}x{$value->Height}) " . "{$value->FileSize} bytes)</h4>" . "<a href=\"{$value->MediaUrl}\">" . "<img src=\"{$value->Thumbnail->MediaUrl}\"></a><br />"; 
                     break;
+				case 'RelatedSearchResult':
+					$relatedArray[$countIndex] = "{$value->Title}";
+					$countIndex = $countIndex + 1;
+					$resultStr .= "<p>{$value->Title}</p>";
+					break;
             }
         }
+		$countIndex = 0;
+		//this line get the array of related word
         
         //substitute the results placeholder
         $contents = str_replace('{RESULTS}', $resultStr, $contents);
